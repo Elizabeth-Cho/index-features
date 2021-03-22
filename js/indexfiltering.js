@@ -4,7 +4,7 @@ var filterlist = "";
 function addFilter(_this, tag) {
     if (_this.classList.contains("active")) {
         _this.classList.remove("active");
-        let fulltag = tag + ' ';
+        fulltag = tag + ' ';
         filterlist = filterlist.replace(fulltag, '');
     }
     else {

@@ -56,7 +56,7 @@ async function redisplaySort() {
                 sorteddata = data;
                 console.log('dude how did you even get here - management');
             }
-            let list = sorteddata;
+            list = sorteddata;
             clearDisplay();
             appendData(sorteddata);
         }
