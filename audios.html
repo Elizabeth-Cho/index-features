@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <link href="../assets/css/fonts.css" rel="stylesheet"/> -->
+        <link href="css/site.css" rel="stylesheet"/>
+        <link href="css/audioindex.css" rel="stylesheet"/>
+    </head>
+    <div class="container">
+        <!-- heading -->
+        <!-- rhs column -->
+        <div class="sorting">
+            <!-- sorting -->
+            <button onclick="dropdownPanels(this, 'sorting')" class="dropdown">
+                <h3>Search</h3>
+            </button>
+            <div id="filter-index">
+                <div id="search-panel">
+                    <div class="search-container">
+                        <input id="search-box" type="text" placeholder="Title or description">
+                    </div>
+                </div>
+
+                <div id="sorting-panel">
+                    <div id="tag-sorting" class="tag-content">
+                        <h3>Filter by Band</h3>
+                        <div class="tags-container">
+                            <button class="tag" onclick="addFilter(this, 'Against-the-Current')">Against the Current</button>
+                            <button class="tag" onclick="addFilter(this, 'All-Time-Low')">All Time Low</button>
+                            <button class="tag" onclick="addFilter(this, 'KDA')">KDA</button>
+                            <button class="tag" onclick="addFilter(this, 'League-of-Legends')">League of Legends</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ordering -->
+                <div id="ordering-panel">
+                    <div id="ordering">
+                        <h3>Sort by</h3>
+                        <div class="select-wrapper">
+                            <div class="drop-select">
+                                <div class="select-trigger"><span>Newest first</span>
+                                    <div class="arrow"></div>
+                                </div>
+                                <div class="option-list">
+                                    <span class="option selected" data-value="chrono">Newest first</span>
+                                    <span class="option" data-value="r-chrono">Oldest first</span>
+                                    <span class="option" data-value="ls">Longest to shortest</span>
+                                    <span class="option" data-value="sl">Shortest to longest</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- submit/reset buttons -->
+                <div class="control-container">
+                    <button class="control" onclick="filterAll()">Filter</button>
+                    <button class="control" onclick="showAll()">Show All</button>
+                </div>
+            </div>
+            <!-- kinda fixed scroll to top button -->
+            <div id="scroll-to-top">
+                <button id="scroll-btn" onclick="scrollToTop()">&#9650;</button>
+            </div>
+            <!-- fixed subscribe button -->
+            <!-- <div id="subscribe">
+                <div id="sub-embed">
+                    <script src="https://apis.google.com/js/platform.js"></script>
+                    <div class="g-ytsubscribe" data-channelid="UCReuHK4sTlAPUszmk5gqjyg" data-layout="full" data-theme="dark" data-count="default">
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <!-- lhs column -->
+        <div id="audios">
+            <div id="none-found">
+                <h3>No audios found</h3>
+            </div>
+        </div>
+    </div>
+    <script src="js/indexloading.js"></script>
+    <script src="js/indexfiltering.js"></script>
+    <script src="js/indexordering.js"></script>
+    <script src="js/indexfunctions.js"></script>
+    <script src="js/indexsearching.js"></script>
+</html>
